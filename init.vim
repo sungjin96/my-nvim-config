@@ -25,7 +25,8 @@ Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple c
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'https://github.com/Raimondi/delimitMate' " 자동 괄호
 Plug 'https://github.com/nvim-telescope/telescope.nvim' " 파일 찾기??
-Plug 'https://github.com/nvim-lua/plenary.nvim'
+Plug 'https://github.com/nvim-lua/plenary.nvim' " telescope 의존성 같음
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter' " 문법 강조 더 자세하게
 
 set encoding=UTF-8
 
@@ -40,7 +41,7 @@ nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
 
-:colorscheme jellybeans
+:colorscheme gruvbox
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
