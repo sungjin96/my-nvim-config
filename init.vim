@@ -24,15 +24,16 @@ Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'https://github.com/Raimondi/delimitMate' " 자동 괄호
+Plug 'https://github.com/nvim-telescope/telescope.nvim' " 파일 찾기??
+Plug 'https://github.com/nvim-lua/plenary.nvim'
 
 set encoding=UTF-8
 
 call plug#end()
 
 
-nnoremap <C-f> :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFocus<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <C-a> :call CocActionAsync('jumpDefinition')<CR>
 
 nmap <F8> :TagbarToggle<CR>
