@@ -28,6 +28,8 @@ Plug 'https://github.com/nvim-telescope/telescope.nvim' " 파일 찾기??
 Plug 'https://github.com/nvim-lua/plenary.nvim' " telescope 의존성 같음
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter' " 문법 강조 더 자세하게
 
+Plug 'https://github.com/drewtempelmeyer/palenight.vim'
+
 set encoding=UTF-8
 
 call plug#end()
@@ -41,7 +43,20 @@ nmap <F8> :TagbarToggle<CR>
 
 :set completeopt-=preview " For No Previews
 
-:colorscheme gruvbox
+set background=dark
+:colorscheme palenight
+
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+"For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+" < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
