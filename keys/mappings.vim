@@ -22,7 +22,7 @@ nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
 " Alternate way to save
-nnoremap <leader>s :w<CR>
+nnoremap <leader>s :w<CR>:CocCommand prettier.formatFile<CR>
 " Alternate way to quit
 nnoremap <leader>q :wq!<CR>
 " Use control-c instead of escape
@@ -54,3 +54,5 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+
